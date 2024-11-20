@@ -1,0 +1,17 @@
+1.use node-lable assign lable to one node label(Team: DGB-Devops) and create deployment alpine with alpine:latest image and make sure it's sheduled on that node only
+
+2. taint_and_tolaration
+   use taint one  node and by using toleration crerate new deployment busybox create with busybox:latest 
+   image make sure this deploy ment only scheduled on tainted node 
+3. create monitoring namespace and  
+create daemonsets with nodeexporter  image: prom/node-exporter it should export the all node metrics 
+
+4. create promotheus deployment and change prometheus config with node exporter as a target, where it shold get the metrics from node_exporter
+
+5. create grafana deployment in monitoring namespace with Create a Persistent Volume (PV) of 5GiB, and a Persistent Volume Claim (PVC) to consume that storage. 
+and add prometheus as backend  add dashbords which can visualise metrics.
+and expose it as Node_port
+
+6. try to create nginx static pod use image nginx:latest
+
+
